@@ -15,7 +15,7 @@ const  FeaturedWorks = () => {
                         {data.featureWorkList.map((post,i) => (
                             <>
                             {i === 0 ? 
-                                <div className="flex  justify-between align-top   flex-wrap sm:flex-nowrap mb-8 pb-4 border-b  border-gray" key={i}>
+                                <a href='' className="flex  justify-between align-top   flex-wrap sm:flex-nowrap mb-8 pb-4 border-b  border-gray" key={i}>
                                     <div className="mb-3 image-254" >
                                         <img src={post.imageUrl} className="image-254"/>
                                     </div>  
@@ -24,10 +24,10 @@ const  FeaturedWorks = () => {
                                         <span className='text-dark-70  text-xl mb-2 inline-block'><span className='bg-secondary text-lg text-white font-bold px-2 rounded-3xl mr-5'>{post.year}</span> <span>{post.module}</span>  </span>
                                         <p className='text-dark text-base'>{post.content}</p>
                                     </div>
-                                </div>
+                                </a>
                             :<>
                                 {screenWidth > 640 &&
-                                    <div className="flex justify-between align-top   flex-wrap sm:flex-nowrap mb-8 pb-4 border-b border-gray" key={i}>
+                                    <a href='' className="flex justify-between align-top   flex-wrap sm:flex-nowrap mb-8 pb-4 border-b border-gray" key={i}>
                                         <div className="mb-3 image-254" >
                                             <img src={post.imageUrl} className="image-254"/>
                                         </div>  
@@ -36,7 +36,7 @@ const  FeaturedWorks = () => {
                                             <span className='text-dark-70  text-xl mb-2 inline-block'><span className='bg-secondary text-lg text-white font-bold px-2 rounded-3xl mr-5'>{post.year}</span> <span>{post.module}</span>  </span>
                                             <p className='text-dark text-base'>{post.content}</p>
                                         </div>
-                                    </div>
+                                    </a>
                                 }
                             </>
                         }
